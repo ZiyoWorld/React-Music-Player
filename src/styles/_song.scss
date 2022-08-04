@@ -1,0 +1,33 @@
+.song-container{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 20%;
+        border-radius: 50%;
+        margin-top: 35px;
+        animation-name: anim1;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        @keyframes anim1 {
+            0%{
+                box-shadow: 0 0 5px rgb(69, 47, 241);
+            }
+            50%{
+                box-shadow: 0 0 20px rgb(69, 47, 241);
+            }
+            100%{
+                box-shadow: 0 0 5px rgb(69, 47, 241);
+            }
+        }
+    }
+    h2{
+        padding: 3rem 1rem 1rem 1rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'SF Pro Display', sans-serif;
+                                                
+}
+
+@import "./_song";
+@import "./_player";
+@import "./library";
+
