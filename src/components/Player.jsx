@@ -1,11 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faAngleLeft, faAngleRight, faPause } from '@fortawesome/free-solid-svg-icons';
 
 
-function Player({currentSong, isPlaying, setIsPlaying}) {
+function Player({currentSong, isPlaying, setIsPlaying, audioRef, songInfo, setSongInfo, timeUpdateHandler}) {
 
-  const audioRef = useRef(null)
+ 
   
   const playSongHandle = ()=>{
     if(isPlaying){
@@ -17,10 +17,7 @@ function Player({currentSong, isPlaying, setIsPlaying}) {
     }
   };
 
-  const [songInfo, setSongInfo] = useState({
-    currentTime: 0,
-    duration:  null,
-  });
+  
 
   const getTime = (time)=>{
           return Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2);
@@ -36,16 +33,7 @@ function Player({currentSong, isPlaying, setIsPlaying}) {
 
   
 
-  const timeUpdateHandler = (e) =>{
-    const current = e.target.currentTime;
-    const duration = e.target.duration;
-
-    setSongInfo({
-      ...songInfo,
-      currentTime: current,
-      duration,
-    })
-  };
+  
 
 
   return (
@@ -55,7 +43,7 @@ function Player({currentSong, isPlaying, setIsPlaying}) {
 
             <input type="range"
             min="0"
-            maxLength={songInfo.duration}
+            maxLength={songInfo.duration || 0}
             value={songInfo.currentTime}
             onChange={drackHandler}
             />

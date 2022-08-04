@@ -19,7 +19,7 @@ function DataMusic(){
             artist: "Monolith",
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
-            active: true,
+            active: false,
 
         },
         {
@@ -29,7 +29,7 @@ function DataMusic(){
             artist: "Poldoore",
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
-            active: true,
+            active: false,
 
         },
         {
@@ -39,7 +39,7 @@ function DataMusic(){
             artist: "Knowmadic",
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
-            active: true,
+            active: false,
 
         },
         {
@@ -49,7 +49,7 @@ function DataMusic(){
             artist: "Psalm Trees",
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
-            active: true,
+            active: false,
 
         },
         {
@@ -59,7 +59,7 @@ function DataMusic(){
             artist: "Yasper, chromonicci",
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
-            active: true,
+            active: false,
 
         },
         {
@@ -69,7 +69,7 @@ function DataMusic(){
             artist: "Kissamilé",
             color: ["#205950", "#2ab3bf"],
             id: uuidv4(),
-            active: true,
+            active: false,
 
         },
 
