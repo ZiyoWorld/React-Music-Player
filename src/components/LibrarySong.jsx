@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
+import {playSong} from '../until';
 
-function LibrarySong({song,songs, audioRef, setCurrentSong, isPlaying, id, setSongs}) {
+function LibrarySong({
+    song, 
+    songs, 
+    audioRef, 
+    setCurrentSong,
+    isPlaying, 
+    id, 
+    setSongs}) {
     const songSelectHandler = ()=>{
         setCurrentSong(song);
-        if(isPlaying){
-           const playPromise = audioRef.current.play();
-           if(playPromise !== undefined){
-            playPromise.then( (audio)=>{
-                audioRef.current.play();
-            })
-           }
-        };
+        
+        playSong(isPlaying, audioRef);
 
         const newSongs = songs.map( song => {
             if(song.id === id){
@@ -25,9 +27,9 @@ function LibrarySong({song,songs, audioRef, setCurrentSong, isPlaying, id, setSo
                     active: false
                 }
             }
-        });
-        setSongs(newSongs)
-
+            
+         });
+         setSongs(newSongs)
     }
   
     return (

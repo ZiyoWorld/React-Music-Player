@@ -8,7 +8,19 @@ body{
                                                 
 }
 
+.App{
+    transition: all 0.25s linear;
+}
+.transitions{
+    transition: all 0.25s linear;
+}
+
+.library-actives-player{
+    margin-left: 30%;
+}
+
 @import "./_song";
 @import "./_player";
 @import "./library";
+@import "./nav"
 

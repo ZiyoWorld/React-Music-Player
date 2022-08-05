@@ -27,3 +27,13 @@
         cursor: pointer;
     }
 }
+
+@media (min-width: 0) and (max-width: 768px) {
+    .time-control{
+        width: 95%;
+    }
+    .player-control{
+        width: 55%;
+    }
+    
+}

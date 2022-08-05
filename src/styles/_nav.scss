@@ -1,0 +1,32 @@
+nav{
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 35px;
+    button{
+        border: 2px solid #bcbcbc;
+        background: transparent;
+        padding: 0.5rem 0.7rem;
+        cursor: pointer;
+        &:hover{
+            background-color: #807d7d;
+            color: #fff;
+        }
+
+    }
+    h1{
+        i{
+            margin-right: 5px;
+        }
+    }
+}
+
+@media (min-width: 0) and (max-width: 768px) {
+    nav{
+        button{
+            z-index: 10;
+        }
+    }
+    
+}

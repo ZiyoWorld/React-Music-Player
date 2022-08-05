@@ -21,6 +21,10 @@
     width: 20rem;
     overflow-y: scroll;
     box-shadow: 2px 2px 40px #b9b9b9;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 0.3s all linear;
+    background-color: #fff;
     h2{
         padding: 2rem;
     }
@@ -50,4 +54,15 @@
 
 .selected{
     background: rgb(188, 176, 235);
+}
+.library-active{
+    transform: translate(0);
+    opacity: 1;
+}
+@media (min-width: 0) and (max-width: 768px) {
+    .library{
+        background-color: #fff;
+        width: 100%;
+    }
+    
 }
